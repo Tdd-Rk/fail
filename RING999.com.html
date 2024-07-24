@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring 999</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            scroll-snap-type: y mandatory;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        .section1 {
+            background-image: url("https://img.freepik.com/free-photo/beautiful-shot-beach-shore-cloudy-sky_181624-33176.jpg");
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            filter: opacity(85%);
+        }
+
+        h1 {
+            height: 70%;
+            color: white;
+            font-family: 'Mulish', sans-serif;
+            font-size: 3.5em;
+            width: 100%;
+            margin: auto;
+            padding: 2vh 1vw 2vh 1vw;
+            text-align: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 1em;
+            border: solid thick rgba(255,60,75,0.7);
+            color: rgba(255,60,75,0.7);
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            width: 100%;
+            margin: 0 15% 0 0;
+            text-align: center;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 3%;
+            padding: 1vh 2vw 1vh 2vw;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            padding: 1% 2% 1% 2%;
+            transition: all 0.5s ease;
+            text-transform: uppercase;
+            background-color: rgba(255, 60, 75, 0.7);
+            border-radius: 50px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.9);
+            color: rgb(255,60,75);
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 10px;
+            transition: all 0.75s ease;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        .section2 {
+            background-image: url("https://img.freepik.com/free-photo/inflatable-boats-life-jackets-migration-crisis-operation_23-2150901808.jpg");
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            left: 0;
+        }
+
+        .section3 {
+            background-image: url("https://img.freepik.com/free-photo/beautiful-scenery-sea-waves-crashing-rock-formations_181624-17765.jpg");
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .paragraph {
+            position: absolute;
+            transition: opacity 0.5s;
+            opacity: 0;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            text-align: center;
+        }
+				
+				
+				
+				
+				#contact_form {
+						min-width: 20%;
+						max-width: 60%;
+						position: relative;
+						right: 8%;
+						<!--bottom:-90%;-->
+						font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;	
+						font-size: 1em;
+				}
+
+				#contact_form select, input {
+						padding: 2%;
+						width: 100%;
+						text-align: left;
+						border: solid #555 0.2em;
+						border-radius: 0.5em;
+						font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;	
+						font-size: 0.8em;
+				}
+
+				input[type=text]:focus {
+						background-color: lightgreen;
+				}
+
+				textarea:focus {
+						background-color: lightgreen;
+				}
+
+				#contact_form textarea {
+						padding: 2%;
+						width: 100%;
+						text-align: left;
+						border: solid #555 0.2em;
+						border-radius: 0.5em;
+						margin: 1% 0 1% 0;
+						font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;	
+						font-size: 0.8em;
+						text-decoration: italic;
+						resize: none;
+				}
+
+				#contact_form label {
+						width: 100%;
+						text-transform: capitalize;
+						border-radius: 0.5em;
+						display: block;
+						margin: 2% 0 2% 0;
+						font-size: 1.1em;
+						color: white;
+				}
+
+				#contact_form button {
+						padding: 2%;
+						width: 100%;
+						margin-top: 5%;
+						border: solid #555 0.2em;
+						border-radius: 0.5em;
+						font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;	
+						font-size: 1em;
+				}
+
+				#contact_form #status {
+						text-transform: capitalize;
+						text-align: center;
+						background-color: rgba(255,255,255,0.8);
+						color: black;
+						margin-top: 10%;
+						font-size: 1.6vh;
+						padding: 2%;
+						visibility: hidden;
+				}
+				
+				
+				
+    </style>
+</head>
+<body>
+    <div class="container" id="scroll-container">
+        <div class="section section1" id="section1">
+            <div>
+                <nav id="nav">
+                    <a href="/#home" class="full_nav">Home</a>
+                    <a href="/#contact" class="full_nav">Contact</a>
+                    <a href="/#about" class="full_nav">About</a>
+                    <ul>
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="/#about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h1>Stay connected.</h1>
+                <h2><em>For safety.</em> For fun. For work.</h2>
+            </div>
+        </div>
+				
+        <div class="section section2" id="section2">
+				</div>
+				
+        <div class="section section3" id="section3">
+            <div id="p1" class="paragraph"></div>
+            <div id="p2" class="paragraph"></div>
+            <div id="p3" class="paragraph"></div>
+            <div id="p4" class="paragraph"></div>
+            <div id="p5" class="paragraph"></div>
+            <div id="p6" class="paragraph"></div>
+            <div id="p7" class="paragraph"></div>
+        </div>
+    </div>
+
+    <script>
+        // Create a pause function
+        const pause = (timeoutMsec) => new Promise(resolve => setTimeout(resolve, timeoutMsec));
+
+        // List of predetermined positions for each paragraph (top and left coordinates)
+        const positions = [
+            { top: '10%', left: '10%' },
+            { top: '20%', left: '30%' },
+            { top: '50%', left: '50%' },
+            { top: '70%', left: '20%' },
+            { top: '80%', left: '60%' },
+            { top: '30%', left: '70%' },
+            { top: '40%', left: '40%' }
+        ];
+
+        // List of texts for each paragraph
+        const texts = [
+            "This is the first paragraph.",
+            "Here is the second paragraph.",
+            "Third paragraph appears here.",
+            "This is the fourth paragraph.",
+            "Fifth paragraph is displayed.",
+            "Sixth paragraph shows up.",
+            "Finally, the seventh paragraph."
+        ];
+
+        async function fade_out_in(readtime, reveal_delay, reset_delay, paras) {
+            for (let i = 0; i < paras; i++) {
+                const para = document.getElementById('p' + (i + 1));
+                para.style.top = positions[i].top;
+                para.style.left = positions[i].left;
+
+                para.style.opacity = '1'; // Reveal the current paragraph
+                await pause(readtime); // Read time delay
+                para.style.opacity = '0'; // Hide the current paragraph
+
+                if (i < paras - 1) {
+                    await pause(reveal_delay); // Delay before revealing the next paragraph
+                }
+            }
+            await pause(reset_delay); // Reset delay
+            fade_out_in(readtime, reveal_delay, reset_delay, paras); // Restart the function
+        }
+
+        // Set the text content of each paragraph before starting the animation
+        function initializeParagraphs() {
+            texts.forEach((text, index) => {
+                const para = document.getElementById('p' + (index + 1));
+                if (para) {
+                    para.textContent = text;
+                }
+            });
+        }
+
+        // Start animation when section3 is in view
+        const section3 = document.getElementById('section3');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    initializeParagraphs();
+                    fade_out_in(3000, 1000, 2000, texts.length);
+                    observer.unobserve(section3); // Stop observing after animation starts
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(section3);
+
+        // Scroll handling for smooth scroll behavior
+        const container = document.getElementById('scroll-container');
+        let isScrolling = false;
+
+        container.addEventListener('wheel', function(event) {
+            event.preventDefault();
+
+            if (isScrolling) return;
+            isScrolling = true;
+
+            const delta = Math.sign(event.deltaY);
+            const targetScrollTop = container.scrollTop + delta * container.clientHeight;
+
+            container.scrollTo({
+                top: targetScrollTop,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000); // Adjust timeout duration if necessary
+        });
+    </script>
+</body>
+</html>

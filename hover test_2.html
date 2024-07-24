@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Logs</title>
+    <style>
+		
+		    h1  {
+				text-decoration: underline;
+				}
+				
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+						background-color: rgba(0,140,0,0.3);
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+						border: solid green 5px;
+        }
+
+        .products div {
+            position: relative;
+            flex: 1 1 30%;
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            min-width: 300px;
+        }
+
+        .names {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .products div:hover .overlay {
+            opacity: 1;
+        }
+				
+        .text {
+            font-size: 1.5em;
+            text-align: center;
+						margin-top:250px;
+        }
+				
+			  .projtext {
+            font-size: 1.5em;
+            text-align: center;
+						padding-top: 150px;
+				}
+				
+				.projects div {
+            flex: 1 1 20%; /* Flex-grow, flex-shrink, and flex-basis for responsive layout */
+            height: 300px; /* Set a height for the divs */
+            background-size: cover; /* Ensure the background image covers the div */
+            background-position: center; /* Center the background image */
+            position: relative; /* For positioning text */
+            overflow: hidden; /* Hide overflow */
+				}
+						
+						
+				.projects div div .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+						border:none;
+						border-radius:50px;
+						align:center;
+	          
+        }
+				
+				.projects div div:hover .overlay {
+        opacity: 1;
+				}
+				
+				.projects div h3 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+            padding: 5px;
+            border-radius: 50px;
+            margin: 0;
+						z-index:1;
+        }
+				
+				.TR1, .TR2, .TR3, .TR4  {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+						padding-bottom: 30px;
+						
+			  }
+				
+			  .projects div div {
+            position: relative;
+            flex: 1 1 25%;
+						border: solid green 2.5px;
+						border-radius: 50px;
+				}
+				
+    </style>
+</head>
+<body>
+    <h1>Please select your product</h1>
+    <div class="products">
+        <div style="background-image:url(https://img.freepik.com/free-photo/firewood-background-chopped-firewood-stack_501050-1178.jpg);">
+            <h1 class="names">Traditional Firewood</h1>
+            <div class="overlay">
+                <div class="text">Hospes quod dico paulum est hasta ac perlege</div>
+            </div>
+        </div>
+        <div style="background-image:url(https://img.freepik.com/free-photo/pellets-surface_144627-33678.jpg);">
+            <h1 class="names">Wood Pellets</h1>
+            <div class="overlay">
+                <div class="text">Hic est sepulchrum haud pulchrum pulchrae feminae</div>
+            </div>
+        </div>
+        <div style="background-image:url(https://images.pexels.com/photos/5089146/pexels-photo-5089146.jpeg);">
+            <h1 class="names">Workshop Offcuts</h1>
+            <div class="overlay">
+                <div class="text">Nomen parentes nominarunt Claudiam</div>
+            </div>
+        </div>
+    </div>
+		<br>
+		<br>
+    <a href="#project" class="button"> <img src="https://cdn.pixabay.com/animation/2023/03/18/14/57/14-57-44-723_512.gif" alt="Arrow" style="width:100px;height:100px; border-radius:25px;"></a>
+		<script>
+        document.querySelector('.button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <div class="projects">
+		    <h1>Please select the project which you want to support</h1>
+		    <div class="TR1" id="project">
+				    <div style="background-image:url(https://img.freepik.com/free-photo/beautiful-playful-river-otter-nature-habitat-czech-republic-lutra-lutra_475641-399.jpg); border-radius:50px;">
+						    <h3>European Beaver Dam Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Suum maritum corde dilexit suo</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/great-egret-ardea-alba_181624-15777.jpg); border-radius:50px;">
+						    <h3>Avocet Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Natos duos creavit. Horum alterum</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/low-angle-shot-dry-ostrich-fern-branches-growing-forest-with-tall-trees_181624-4931.jpg); border-radius:50px;">
+						    <h3>Woodland Coppice Project</h3>
+								<div class="overlay">
+                    <div class="projtext">in terra linquit alium sub terra locat.</div>
+								</div>
+            </div>
+				</div>
+				
+				<div class="TR2" id="project">
+				    <div style="background-image:url(https://img.freepik.com/free-photo/closeup-northern-fiscal-sitting-branch-sunlight_181624-19044.jpg); border-radius:50px;">
+						    <h3>Pied Flycatcher Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Sermone lepido, tum autem incessu commodo.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/black-flying-foxes-hanging-tree_167946-161.jpg); border-radius:50px;">
+						    <h3>Greater Horseshoe Bat Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Domum servarvit lanam fecit.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/beautiful-fish-sunset_23-2150737633.jpg); border-radius:50px;">
+						    <h3>Atlantic Salmon Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Dixi</div>
+								</div>
+            </div>
+				</div>
+		
+				<div class="TR3" id="project">
+				    <div style="background-image:url(https://st3.depositphotos.com/1394326/17014/i/450/depositphotos_170145916-stock-photo-cute-harvest-mouse.jpg); border-radius:50px;">
+						    <h3>Harvest Mouse Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Abi.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/vertical-shot-beautiful-golden-field-with-wire-fences-captured-sunny-day_181624-37379.jpg); border-radius:50px;">
+						    <h3>Heathland Restoration Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Miser Catulle destinas ineptire et quod vides perisse perditum ducas!</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/wooden-bridge-lake-field-surrounded-by-hills-cloudy-sky_181624-14618.jpg); border-radius:50px;">
+						    <h3>Salt Marsh Project</h3>
+								<div class="overlay">
+                    <div class="projtext">fulsere quondam candidi tibi soles cum ventitabas quo puella ducebat amata nobis quantum amabitur nulla.</div>
+								</div>
+            </div>
+				</div>
+				
+				<div class="TR4" id="project">
+				    <div style="background-image:url(https://img.freepik.com/free-photo/beautiful-shot-wooden-cabin-near-river-black-forest-mountains-germany_181624-39222.jpg); border-radius:50px;">
+						    <h3>Waterwheel Restoration Project</h3>
+								<div class="overlay">
+                    <div class="projtext">ibi illa multa tum iocosa fiebant quae tu volebas nec puella nolebat. Fulsere vere candidi tibi soles. Nunc iam illa non vult tu quoque impotens noli nec quae fugit sectare nec miser vive sed obstinata mente perfer obdura.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/beautiful-endangered-lynx-cub-nature-habitat-lynx-lynx_475641-1787.jpg); border-radius:50px;">
+						    <h3>Native Wildcats Project</h3>
+								<div class="overlay">
+                    <div class="projtext">vale puella! iam Catullus obdurat nec te requiret nec rogabit invitam at tu dolebis cum rogaberis nulla.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/rabbit-looking-around-grassy-field_181624-5641.jpg); border-radius:50px;">
+						    <h3>Wildlife Conservation Project</h3>
+								<div class="overlay">
+                    <div class="projtext">scelesta vae te! quae tibi manet vita! quis nunc te adibit? cui videberis bella? quem nunc amabis? cuius esse diceris? quem basiabis? cui labella mordebis? at tu, Catulle, destinatus obdura.</div>
+								</div>
+            </div>
+				</div>
+		</div>
+<footer>
+<p>NEED TO ADD CREDIT FOR THE PICS</p>
+</body>
+</html>
