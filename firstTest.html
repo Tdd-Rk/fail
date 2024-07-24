@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <title>My first HTML page</title>
+  <meta http-equiv="refresh" content="120">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Todd Rook" content="Just my first ever html page with lots of cool stuff.">
+<style>
+body  {
+  background-image: url('https://cdn.esahubble.org/archives/images/screen/heic0514a.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFFFFF;
+}
+h1  {font-family:courier new;}
+div.SecThiFou {
+  width: 100%;
+  overflow: auto;
+}
+div.SecThiFou div {
+  width:33%;
+  float:left;
+}
+div.FifSix {
+  width: 100%;
+  overflow: auto;
+}
+div.FifSix div {
+  width:33%;
+  float:left;
+  
+}
+h5  {font-size: 80%;}
+a:hover {
+  color:yellow;
+  background-color:violet;
+  text-decoration:underline;
+}
+a:active {
+  color:white
+  background-color:transparent;
+  text-decoration:underline;
+}
+a:link, a:visited {
+  <!--background-color: #2ab6ff;-->
+  color: coral
+  padding: 40px 40px;
+  text-align:none;
+  text-decoration:none;
+  display:inline-block;
+}
+table, th, td {
+  border: 10px solid DarkCyan;
+  border-radius: 500px;
+  border-collapse: collapse;
+  td:hover {background-color: #9932CC;}
+  th:hover {background-color: #9932CC;}
+  text-align: center;
+}
+th, td {
+  padding: 15px;
+  border-style: groove;
+}
+
+tr:nth-child(odd), th:nth-child(odd) {
+  background-color: rgba(148,0,211,0.7);
+}
+tr:nth-child(even), tr:nth-child(even) {
+  background-color: rgba(139,0,139,0.7);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(143, 188, 143, 0.5);
+  display: inline-block;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgba(143, 188, 143, 0.5);
+}
+li a:hover {
+  background-color: rgb(200, 225, 200);
+  color:black;
+}
+button:hover {
+  color: #f2f2f2;
+  background-color: black;
+}  
+</style>
+</head>
+<body>
+<h3 id="Top">Navigation Menu</h3>
+<ul>
+  <li><a href="#Top">Top (lol)</a></li>
+  <li><a href="#MiddleTop">Middle/Top</a></li>
+  <li><a href="#MiddleBottom">Middle/Bottom</a></li>
+  <li><a href="#Bottom">Bottom</a></li>
+</ul>
+
+<div class="SecThiFou">
+  <div style="background-color: rgba(200, 0, 0, 0.5); text-align:center;">
+    <h1 style="color:red;">My First Heading</h1>
+    <a style="background-color: rgba(0,0,0,0.65); color:white;" href="https://lichess.org" target="_blank"><b>Cheese</b>
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Lichess_Logo_2019.svg/1200px-Lichess_Logo_2019.svg.png" alt="Lichess Logo" width="50" height="50">
+    </a>
+    <!--<p> <a href="#Bottom">Jump to bottom of the page</a> </p>-->
+  </div>
+
+  <div style="background-color: rgba(0, 200, 0, 0.5); text-align:center;">
+    <h2><span style="border:5px solid DodgerBlue; color:Yellow; background-color:red;">My <ins>  Second</ins> Heading</span></h2>
+    <p> <span style="background-color:coral;" style="color:DarkBlue;"> This is a great paragraph<br>and it continues over 3 lines!<br>Cool!</span></p>
+  </div>
+
+  <div style="background-color: rgba(0, 0, 200, 0.5); text-align:center;">
+    <h3 id="MiddleTop" title="THIRD">My Third <sub>H</sub>eadin<sup>g</sup></h1>
+       <a href="https://diep.io/">
+    <img src="https://cdn.pixabay.com/photo/2016/10/27/07/35/bird-1773606_1280.png" alt=fun img to game" style="width:84px;height:84px;">
+    </a>
+  </div>
+</div>
+
+<!--
+Comments
+R
+Dum
+-->
+
+<h4 id="MiddleBottom" style="color:black ; background-color:tomato; font-size:200%; text-align: center;">My Fourth Heading</h2>
+<p title="hiya">
+This paragraph
+contains         a lot of <b>spaces</b>
+in the <mark>source         code</mark>,
+but the        <em>browser</em>
+ignores them.
+</p>
+<table>
+  <caption><b>Some Fun Numbers</b></captions>
+  <tr>
+    <th style="width:10%">Name</th>
+    <th>The First Digit</th>
+    <th>The Second Digit</th>
+    <th>The Third Digit</th>
+    <th>The Fourth Digit</th>
+    <th>The Fifth Digit</th>
+  </tr>
+  <tr>
+    <td><b>Pi</b></td>
+    <td>3</td>
+    <td>1</td>
+    <td>4</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Euler's Number</td>
+    <td>2</td>
+    <td>7</td>
+    <td>1</td>
+    <td>8</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Tau</td>
+    <td>6</td>
+    <td>2</td>
+    <td>8</td>
+    <td>3</td>
+    <td>1</td>
+  </tr>
+</table>
+<div class="FifSix">
+  <div style="font-size:120%; font-family:comic sans ms; background-color:rgba(0, 0, 0, 0.8);">
+    <h5>My Fifth Heading</h5>
+    <p>.....................<br>
+    <i>H E L L O !</i><br>
+  .....................</p>
+    <img src="https://compote.slate.com/images/2f2fc6b0-96b7-4bf7-812a-dcaa8c6ce3d6.gif" alt="Google Gif" width="150" height="100"> <br> <br>
+    <button style="border-style:groove; border-radius:100px; border-collapse: collapse; border:3px solid DarkGray; height:35px; width:110px; padding-top:10px; padding-bottom:25px" onclick="document.location='https://www.google.co.uk'" target="_blank" >Open Google</button>
+  </div>
+
+  <div style="background-color:rgba(50, 50, 50, 0.8); width: 25%; text-align:center">
+    <h6 id="Bottom" style="font-size:40px;">My Sixth Heading</h2>
+    <p> <bdo dir="rtl">A paragraph. </bdo> </p>
+    <a href="mailto:todders135@gmail.com" target="_blank">This is a link</a>
+    <p> A wisened man once said:</p>
+    <blockquote> <q> Those who sit on the fence get sore bottoms. </q> </blockquote>
+    <p>And that wise man was <abbr title="The Only Dangerous Donkey">TODD</abbr>
+  </div>
+  <div>
+    <p style="background-color:rgba(100, 100, 100, 0.8);><a href="https://www.zlap.io" target="ZlapScreen">Press to play Zlap!</a></p>
+    <iframe src="https://red-ball4.com/data/image/zlap.io.jpg" style="border:none;" name="ZlapScreen" title="zlap game" height="512px" width="580px"></iframe>
+  </div>
+</div class="Login">
+<form>
+  <label for="username"Username:</label><br>
+	<input type="text" value="Do not leave this blank"></input><br>
+	<label for="password"Password:</label><br>
+	<input type="text" value="Do not leave this blank either"></input><br>
+	<input type="submit" value="Submit">
+</form>
+<div>
+<footer>
+<section>
+<p>This page was made by your's truly: Todd Rook &euro;</p>
+</section>
+</body>
+</html>
